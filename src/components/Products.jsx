@@ -98,16 +98,18 @@ const Products = () => {
           const { id, name, image, description } = curElem;
           return (
             <div key={id} className="card">
+              <NavLink to="/about">
               <figure>
                 <img src={image} alt={name} />
               </figure>
               <div className="card-data">
                 <h3>{name}</h3>
                 <p>{description}</p>
-                <NavLink to="/service">
+                
                   <Button className="btn">More Details...</Button>
-                </NavLink>
+                
               </div>
+              </NavLink>
             </div>
           );
         })}
